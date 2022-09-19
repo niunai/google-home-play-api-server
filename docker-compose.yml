@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  google-home-play-api-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: 'google-home-play-api-server'
+    working_dir: '/usr/app'
+    ports:
+      - '8084:8084'
+    network_mode: "host"
+    restart: always
+    tty: true
